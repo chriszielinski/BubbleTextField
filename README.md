@@ -1,8 +1,8 @@
 
 # BubbleTextField
 
-[![Platform](https://img.shields.io/cocoapods/p/Player.svg?style=flat)](http://cocoadocs.org/docsets/Player) 
-[![Pod Version](https://img.shields.io/cocoapods/v/Player.svg?style=flat)](http://cocoadocs.org/docsets/Player/) 
+[![Platform](https://img.shields.io/cocoapods/p/BubbleTextField.svg?style=flat)](http://cocoadocs.org/docsets/BubbleTextField) 
+[![Pod Version](https://img.shields.io/cocoapods/v/BubbleTextField.svg?style=flat)](http://cocoadocs.org/docsets/BubbleTextField/) 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Swift Version](https://img.shields.io/badge/language-swift%204.1-brightgreen.svg)](https://developer.apple.com/swift) 
 [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/chriszielinski/BubbleTextField/blob/master/LICENSE)
@@ -42,7 +42,7 @@ let bubbleTextField = BubbleTextField()
 view.addSubview(bubbleTextField)
 ```
 
-~groovy~ 🏖️
+\~groovy\~ 🏖️
 
 ## Community
 
