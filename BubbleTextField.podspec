@@ -42,6 +42,7 @@ Pod::Spec.new do |s|
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.source_files  = "BubbleTextField"
+  s.swift_version = "4.1"
 
 
 end
