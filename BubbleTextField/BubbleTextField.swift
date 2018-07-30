@@ -8,7 +8,7 @@
 
 import Cocoa
 
-public class BubbleTextField: NSTextField {
+open class BubbleTextField: NSTextField {
 
     var widthConstraint: NSLayoutConstraint!
 
@@ -37,17 +37,17 @@ public class BubbleTextField: NSTextField {
         widthConstraint.isActive = true
     }
 
-    override public func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         sharedInit()
     }
 
-    override public func updateConstraints() {
+    override open func updateConstraints() {
         super.updateConstraints()
         widthConstraint.constant = cell!.cellSize.width + 3
     }
 
-    override public func textDidChange(_ notification: Notification) {
+    override open func textDidChange(_ notification: Notification) {
         super.textDidChange(notification)
         needsUpdateConstraints = true
     }
