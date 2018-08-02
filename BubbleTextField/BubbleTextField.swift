@@ -11,15 +11,12 @@ import Cocoa
 open class BubbleTextField: NSTextField {
 
     var widthConstraint: NSLayoutConstraint!
-    fileprivate var bubbleTextFieldCell: BubbleTextFieldCell {
-        return cell as! BubbleTextFieldCell
+    fileprivate var bubbleTextFieldCell: BubbleTextFieldCell? {
+        return cell as? BubbleTextFieldCell
     }
-    public var isContinuousSpellCheckingEnabled: Bool {
-        set {
-            bubbleTextFieldCell.isContinuousSpellCheckingEnabled = newValue
-        }
-        get {
-            return bubbleTextFieldCell.isContinuousSpellCheckingEnabled
+    public var isContinuousSpellCheckingEnabled: Bool = false {
+        didSet {
+            bubbleTextFieldCell?.isContinuousSpellCheckingEnabled = isContinuousSpellCheckingEnabled
         }
     }
 
@@ -33,7 +30,9 @@ open class BubbleTextField: NSTextField {
     }
 
     func sharedInit() {
-        cell = BubbleTextFieldCell(textCell: stringValue)
+        let bubbleTextFieldCell = BubbleTextFieldCell(textCell: stringValue)
+        bubbleTextFieldCell.isContinuousSpellCheckingEnabled = isContinuousSpellCheckingEnabled
+        cell = bubbleTextFieldCell
 
         isBezeled = true
         bezelStyle = .roundedBezel
