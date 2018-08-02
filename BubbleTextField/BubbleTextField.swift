@@ -67,15 +67,15 @@ open class BubbleTextField: NSTextField {
 
 extension BubbleTextField: NSTextViewDelegate {
     @available(OSX 10.12.2, *)
-    public func textView(_ textView: NSTextView, shouldSelectCandidateAt index: Int) -> Bool {
+    open func textView(_ textView: NSTextView, shouldSelectCandidateAt index: Int) -> Bool {
         return textViewDelegate?.textView?(textView, shouldSelectCandidateAt: index) ?? true
     }
 
-    public func textView(_ textView: NSTextView, shouldChangeTextIn affectedCharRange: NSRange, replacementString: String?) -> Bool {
+    open func textView(_ textView: NSTextView, shouldChangeTextIn affectedCharRange: NSRange, replacementString: String?) -> Bool {
         return textViewDelegate?.textView?(textView, shouldChangeTextIn: affectedCharRange, replacementString: replacementString) ?? true
     }
 
-    public func textView(_ view: NSTextView, didCheckTextIn range: NSRange, types checkingTypes: NSTextCheckingTypes, options: [NSSpellChecker.OptionKey : Any] = [:], results: [NSTextCheckingResult], orthography: NSOrthography, wordCount: Int) -> [NSTextCheckingResult] {
+    open func textView(_ view: NSTextView, didCheckTextIn range: NSRange, types checkingTypes: NSTextCheckingTypes, options: [NSSpellChecker.OptionKey : Any] = [:], results: [NSTextCheckingResult], orthography: NSOrthography, wordCount: Int) -> [NSTextCheckingResult] {
         return textViewDelegate?.textView?(view, didCheckTextIn: range, types: checkingTypes, options: options, results: results, orthography: orthography, wordCount: wordCount) ?? results
     }
 }
