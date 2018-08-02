@@ -11,6 +11,17 @@ import Cocoa
 open class BubbleTextField: NSTextField {
 
     var widthConstraint: NSLayoutConstraint!
+    fileprivate var bubbleTextFieldCell: BubbleTextFieldCell {
+        return cell as! BubbleTextFieldCell
+    }
+    public var isContinuousSpellCheckingEnabled: Bool {
+        set {
+            bubbleTextFieldCell.isContinuousSpellCheckingEnabled = newValue
+        }
+        get {
+            return bubbleTextFieldCell.isContinuousSpellCheckingEnabled
+        }
+    }
 
     public override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
@@ -57,6 +68,14 @@ open class BubbleTextField: NSTextField {
 private class BubbleTextFieldCell: NSTextFieldCell {
 
     var fieldEditor: BubbleTextView = BubbleTextView()
+    var isContinuousSpellCheckingEnabled: Bool {
+        set {
+            fieldEditor.isContinuousSpellCheckingEnabled = newValue
+        }
+        get {
+            return fieldEditor.isContinuousSpellCheckingEnabled
+        }
+    }
 
     override var cellSize: NSSize {
         let superSize = super.cellSize

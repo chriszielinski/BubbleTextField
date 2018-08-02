@@ -7,21 +7,18 @@
 //
 
 import Cocoa
+import BubbleTextField
 
 class ViewController: NSViewController {
+
+    @IBOutlet var bubbleTextfield: BubbleTextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        bubbleTextfield.isContinuousSpellCheckingEnabled = true
     }
-
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
-    }
-
 
 }
 

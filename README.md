@@ -14,6 +14,7 @@
 
 ### Features
 - [x] Auto-expanding width
+- [x] Continuous spell checking
 - [ ] Supports `placeholderString`
 
 ## Installation
@@ -39,6 +40,8 @@ Just create and add the `BubbleTextField ` to your view hierarchy.
 
 ```swift
 let bubbleTextField = BubbleTextField()
+// Optionally, activate spell checking.
+bubbleTextField.isContinuousSpellCheckingEnabled = true
 view.addSubview(bubbleTextField)
 ```
 

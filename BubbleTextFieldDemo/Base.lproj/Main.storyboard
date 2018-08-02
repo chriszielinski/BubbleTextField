@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -726,6 +727,9 @@
                             <constraint firstItem="tJF-N4-j7M" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="TyK-Qw-Kj4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bubbleTextfield" destination="tJF-N4-j7M" id="xWz-ld-qLv"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
