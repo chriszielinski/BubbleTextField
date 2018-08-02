@@ -6,7 +6,10 @@
 
 ##### Enhancements
 
-* None.
+* Added support for some `NSTextViewDelegate` methods. Namely,
+	* `textView(_ textView: NSTextView, shouldSelectCandidateAt index: Int) -> Bool`
+	* `textView(_ textView: NSTextView, shouldChangeTextIn affectedCharRange: NSRange, replacementString: String?) -> Bool`
+	* `textView(_ view: NSTextView, didCheckTextIn range: NSRange, types checkingTypes: NSTextCheckingTypes, options: [NSSpellChecker.OptionKey : Any] = [:], results: [NSTextCheckingResult], orthography: NSOrthography, wordCount: Int) -> [NSTextCheckingResult]`
 
 ##### Bug Fixes
 
